@@ -1,0 +1,169 @@
+@import "../theme/catppuccin-latte/waybar.css";
+
+* {
+  background-color: @background;
+  color: @foreground;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 10px;
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 8px;
+}
+
+#workspaces button.empty {
+  opacity: 1.0;
+}
+
+/* Each module */
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#wireplumber,
+#tray,
+#custom-weather,
+#custom-weather.severe,
+#custom-weather.sunnyDay,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.default {
+  padding: 0px 15px;
+  color: #e5e5e5;
+  border-radius: 20px;
+}
+
+#workspaces {
+  border-radius: 10px;
+  padding: 0px 10px;
+  color: #ebcb8b;
+}
+
+#cpu {
+  color: #fb958b;
+}
+
+#memory {
+  color: #ebcb8b;
+}
+
+#custom-weather.severe {
+  color: #eb937d;
+}
+
+#custom-weather.sunnyDay {
+  color: #c2ca76;
+}
+
+#custom-weather.clearNight {
+  color: #cad3f5;
+}
+
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight {
+  color: #c2ddda;
+}
+
+#custom-weather.rainyDay,
+#custom-weather.rainyNight {
+  color: #5aaca5;
+}
+
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight {
+  color: #d6e7e5;
+}
+
+#custom-weather.default {
+  color: #dbd9d8;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+
+#backlight {
+  color: #8fbcbb;
+}
+
+#clock {
+  color: #f5bde6;
+}
+
+#battery.charging,
+#battery.full,
+#battery.plugged {
+  color: #26a65b;
+}
+
+#battery.critical:not(.charging) {
+  color: #f53c3c;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #ed8796;
+}
+
+#bluetooth {
+  color: #707d9d;
+}
+
+#bluetooth.disconnected {
+  color: #ed8796;
+}
+
+#network {
+  color: #b48ead;
+}
+
+#network.disconnected {
+  color: #ed8796;
+}
+
+#temperature {
+  color: #8aadf4;
+}
+
+#temperature.critical {
+  background-color: #ed8796;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #ed8796;
+}
+
