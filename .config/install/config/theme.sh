@@ -1,7 +1,7 @@
 # Set initial theme
 mkdir -p ~/.config/current
 ln -snf ~/.config/theme/tokyo-night ~/.config/current/theme
-ln -snf ~/.config/current/theme/backgrounds/1-scenery-pink-lakeside-sunset-lake-landscape-scenic-panorama-7680x3215-144.png ~/omarchy/current/background
+ln -snf ~/.config/current/theme/backgrounds/1-scenery-pink-lakeside-sunset-lake-landscape-scenic-panorama-7680x3215-144.png ~/.config/current/background
 
 mkdir -p ~/.config/btop/themes
 ln -snf ~/.config/current/theme/btop.theme ~/.config/btop/themes/current.theme
